@@ -13,12 +13,7 @@ The resultat should be presented for each and every part in the template. The pr
 * [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)
 
 Look at the picture below for an example of the result.
-OBS! This image was captured with plugins activated so your result could vary. Below is the translation of the swedish.
+OBS! This image was captured with plugins activated so your result could vary. 
 
 ![facit bild](facit.png)
 
-* "Här kommer lite text med en span-tagg" == "Here are some text whitin a span tag"
-* "Antal element" == "Number of elements"
-* "Antal attribut" == "Number of attributes"
-* "Antal kommentarer" == "Number of comments"
-* "Antal textnoder" == "Number of text node"
