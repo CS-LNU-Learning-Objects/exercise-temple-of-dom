@@ -1,0 +1,12 @@
+.result {
+    background-color: grey;
+    border: 1px dotted black;
+    margin: 10px;
+    width: 300px;
+    padding-left: 3px;
+}
+
+.resultText {
+    text-align: center;
+    font-size: 1.3em;
+}
