@@ -56,12 +56,12 @@ function nodeCount (node) {
  * @param {String} templateID - the ID of the template in the HTML
  */
 function UseTemplate (templateID) {
-    // Don´t really like the string-stuff here but hey ho, lets go.
+  // Don´t really like the string-stuff here but hey ho, lets go.
   var arr = []
-  arr.push({headline: 'Number of elements', value: elementNumber})
-  arr.push({headline: 'Number of attributes', value: attributeNumber})
-  arr.push({headline: 'Number of comments', value: commentNumber})
-  arr.push({headline: 'Number of text nodes', value: textNodeNumber})
+  arr.push({ headline: 'Number of elements', value: elementNumber })
+  arr.push({ headline: 'Number of attributes', value: attributeNumber })
+  arr.push({ headline: 'Number of comments', value: commentNumber })
+  arr.push({ headline: 'Number of text nodes', value: textNodeNumber })
 
   var template = document.getElementById(templateID)
   for (var i = 0; i < arr.length; i += 1) {
@@ -82,7 +82,7 @@ function run (templateID, node) {
   nodeCount(node)
   UseTemplate(templateID)
 
-    // must reset after each running
+  // must reset after each running
   elementNumber = 0
   attributeNumber = 0
   commentNumber = 0
