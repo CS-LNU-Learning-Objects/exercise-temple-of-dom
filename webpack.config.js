@@ -1,15 +1,18 @@
 var path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './client/source/js/app.js',
+  mode: 'development',
+  entry: './src/js/app.js',
   output: {
     filename: 'build.js',
-    path: path.resolve(__dirname, 'client/source')
+    path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    contentBase: path.join(__dirname, 'client/source'),
+    contentBase: path.join(__dirname, 'src'),
     port: 4000,
-    public: 'localhost:4000'
+    public: 'localhost:4000',
+    watchContentBase: true
   },
   devtool: 'cheap-eval-source-map',
   module: {
@@ -28,6 +31,10 @@ module.exports = {
         }
       },
       {
+        test: /\.html$/,
+        use: [{ loader: 'html-loader' }]
+      },
+      {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
       },
@@ -38,5 +45,13 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      favicon: './src/favicon.ico',
+      filename: 'index.html',
+      inject: false
+    })
+  ]
 }
